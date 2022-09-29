@@ -5,14 +5,22 @@
 }
 @font-face {
     font-family: 'texto';
-    src: url('fontes/Sriracha-Regular.ttf') format('truetype');
+    src: url('fontes/Louis\ George\ Cafe.ttf') format('truetype');
 }
-
+@font-face {
+  
+    src: url('fontes/Mainstay.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'titulo';
+    src: url('fontes/Quick.ttf')format('truetype');  ;
+}
 body{
-    background-color: aqua;
+   background-color: #ccc;
 }
 header > h1{
     text-align: center;
+    
     padding-top: 155px;
     padding-bottom: -10px;
     font-size: 50px;
@@ -24,14 +32,6 @@ header > h3{
     padding-top: 0px;
     color: aqua;
 }
-.base{
-    background-image: url(imagens/Imagem1.jpg);
-    margin-top: 15px;
-    background-size: cover;
-    background-position: fixed;
-    margin-left: -10px;
-    margin-right: -10px;
-}
 header{
     width: 101vw;
     height: 400px;
@@ -40,6 +40,7 @@ header{
     margin-top: -34px;
 }
 nav{
+    margin-top: ;
     padding-top: 40px;
     padding-left: 15px;
     text-decoration: none;
@@ -70,13 +71,16 @@ nav > a{
 .menu nav a:hover::after{
     width: 50px;
 }
+fixoNoTopo{
+    position: fixed;
+    top: 0px;
+}
 .conteiner{
     display: flex;
     align-items: center;
     justify-content: center;
     box-sizing: border-box;
     margin: 0 auto;
-   
 }
 .back{
     animation: animate 16s ease infinite;
@@ -85,15 +89,20 @@ nav > a{
 @keyframes animate{ 
     0%, 100%{
         background-image: url(imagens/DRUM.jpg);
+        background-attachment: fixed;
     }
     25%{
         background-image: url(imagens/Imagem1.jpg);
+        background-attachment: fixed;
     }
     50%{
-        background-image: url(imagens/imagem\ 2.jpg);
+        background-image: url(imagens/photo.jpg);
+        background-attachment: fixed;
+        background-size: cover;
     }
     75%{
         background-image: url(imagens/TF2.jpg);
+        background-attachment: fixed;
     }
 }
 
@@ -114,6 +123,7 @@ nav > a{
     
 }
 .sociais button{
+margin-top: -10vh;
    width: 40px;
    height: 40px;
    cursor: pointer;
@@ -131,10 +141,10 @@ estilizacao mobile*/
     background: #0000008c;
     backdrop-filter: blur(10px);
     position: absolute;
-    top: 0;
+    top: 55px;
     left: 0;
     width: 100%;
-    height: 63.5vh;
+    height: 54.5vh;
     visibility: hidden;
     transition: 0.5s;
 }
@@ -145,6 +155,7 @@ estilizacao mobile*/
 }
 .menu-mobile nav a:hover{
     background:#1816168c ;
+    
 }
 @media screen and (max-width: 910px) {
     .menu, .sociais{
@@ -163,21 +174,21 @@ estilizacao mobile*/
 
 /* trabalhando a animacoa do batao*/
 button.btu{
-    margin-top: -595px;
-    margin-left: -500px;
-    width: 100px;
-    height: 100px;
+    margin-top: -640px;
+    margin-left: -597px;
+    width: 50px;
+    height: 50px;
     border: 2px solid #ccc;
-    border-radius: 25px;
+    border-radius: 2px;
     background: transparent;
 }
 .linha{
-    width: 75px;
-    height: 5px;
+    width: 30px;
+    height: 3px;
     background: #ccc;
     position: relative;
     display: block;
-    margin: 18px auto;
+    margin: 8px auto;
     transform-origin: center;
     cursor: pointer;
     transition: 0.2s;
@@ -186,14 +197,15 @@ button.ativar{
     border: 2px solid red;
 }
 button.ativar .linha:nth-child(1){
-    transform: translateY(25px)rotate(-45deg);
-    background-color: red;}
+    transform: translateY(25px)rotate(-85deg);
+    background-color: red;
+}
 
 button.ativar .linha:nth-child(2){
     width: 0;
     }  
 button.ativar .linha:nth-child(3){
-    transform: translateY(-25px)rotate(45deg);
+    transform: translateY(-25)rotate(85deg);
     background-color: red;
 }
 /*Fechando*/
@@ -201,34 +213,55 @@ button.ativar .linha:nth-child(3){
 section{
     padding: 15px;
     font-family: 'texto';
+    font-size: 20px;
+    margin-left: 5vw;
+    text-indent: 20px;
+    line-height: 2em;
 }
-section.q1{
-    
-    color: white;
-    padding-left: 5px;
-    text-align: center;
-    display: inline-block;
+section > h1{
+    text-shadow: 1px 1px 0px black;
+
 }
-#coluna{
-    margin-left: 65vw;
-    width: 35vw;
-    background: #1a19198c;
-    backdrop-filter: blur(5px);
-}
-#coluna1{
-    width: 25vw;
-    background: #1a19198c;
-    backdrop-filter: blur(5px);
-}
-section.q2{
-    padding-left: 5vw;
-    color: white;
+.base{
+    margin: 15px 100px 0 100px;
+    background-color: white;
+    box-shadow: inset 6px 6px 6px 0px black;
+
 }
 article{
-    width: 101vw;
-    height: 200px;
-    background-color: rgb(8, 63, 230);
-    margin-left: -10px;
+    width: 90vw;
+    height: 50px;
+    margin: 20px auto;
+    background-color: white;
+    text-align: justify;
+    border-radius: 15px;
+}
+#coluna{
+    
+}
+.base > h1{
+    text-align: center;
+    padding-top: 30px;
+    margin-bottom: 10px;
+    font-family: 'titulo';
+    line-height: 2em;
+    font-size: 3em;
+}
+section > img{
+    width: 30vw;
+}
+.q1 > p{
+   width: 40vw; 
+}
+.q1{
+  display: flex;
+}
+.q2 > p{
+    width: 40vw; 
+    padding-left: 20px;
+}
+.q2{
+    display: flex;
 }
 /*Estilizando o footer*/
 footer{
@@ -236,7 +269,7 @@ footer{
     margin: -10px;
     margin-bottom: -20px;
     padding: 5px;
-    background-color: black;
+    background-color: #ccc;
     color: white;
 }
 footer > p{
@@ -287,3 +320,16 @@ footer > p{
     text-align: center;
 }
 /* fechando*/ 
+.usadas{
+    padding: 50px;
+    padding-top: 10px;
+}
+
+
+.marca{
+    width: 80px;
+    height: 80px; 
+    padding: 30px;
+    padding-top: 5px;
+    border-radius: 10px;
+}
